@@ -1,7 +1,7 @@
 import speech_recognition as sr
 import webbrowser
 import pyttsx3
-import musicLibrary
+import musicLibrary   # make sure in same folder you should created a file for music with (musicLibrary)
 import requests
 import os
 import subprocess
@@ -11,7 +11,7 @@ from difflib import get_close_matches
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
-newsapi = "8d8e3712d89a4ee487c3e0c1fe211017"
+newsapi = "your_newsapi_key_here"   # Replace with your own NewsAPI Key
 
 def speak(text):
     engine.say(text)
@@ -46,15 +46,15 @@ def processCommand(c):
 
     elif "open instagram" in c:
         speak("Opening Instagram")
-        os.startfile(r"C:\Users\anshu\Desktop\Instagram.lnk")
+        os.startfile(r"C:\Path\To\Instagram.link")  # Update the path to where Instagram shortcut is saved on your PC
 
     elif "open vs code" in c:
         speak("Opening VS Code")
-        os.startfile(r"C:\Users\anshu\Desktop\Visual Studio Code.lnk")
+        os.startfile(r"C:\Path\To\Visual Studio Code.lnk")  # Update the path to where Vs Code is saved on your PC
 
     elif "open spotify" in c:
         speak("Opening Spotify")
-        os.startfile(r"C:\Users\anshu\Desktop\Spotify.lnk")
+        os.startfile(r"C:\Path\To\Spotify.lnk")  # Update the path to where Spotify shortcut is saved on your PC
 
     elif "shutdown" in c.lower():
         speak("Shutting down the system.")
